@@ -1,15 +1,25 @@
 # E-Commerce SQL Analytics
 
-A hands-on **SQL portfolio project** exploring e-commerce sales, product performance, and customer behavior using **SQLite**. The project focuses on business questions, joins, grouping, aggregations, and actionable analytics.
+A hands-on **SQL portfolio project** exploring e-commerce sales, product performance, and customer behavior using **SQLite**. The project focuses on business questions, joins, aggregations, and practical analytics storytelling.
 
-> **Status:** Completed — the SQL analysis exercises are solved and saved in the query files.
+> **Status:** Completed — the SQL exercises are solved, documented, and paired with dashboard screenshots for presentation.
 
 ## What is inside?
 
 - **1,400 customers**, **12 categories**, **240 products**, **10,000 orders**, and thousands of order items.
-- Synthetic, reproducible data with an included `.db` file.
-- 12 practice questions across sales, product, and customer analytics, all completed in the query files.
-- Room to grow into a Power BI dashboard and an ETL pipeline.
+- Synthetic, reproducible data with an included SQLite database.
+- Three completed SQL analysis files covering sales, product, and customer insights.
+- Final dashboard screenshots saved in the [screenshots](screenshots/) folder.
+
+## Project structure
+
+- [database/schema.sql](database/schema.sql) — database schema definition
+- [database/ecommerce.db](database/ecommerce.db) — SQLite data source
+- [queries/01_sales_overview.sql](queries/01_sales_overview.sql) — sales overview analysis
+- [queries/02_product_analysis.sql](queries/02_product_analysis.sql) — product and category analysis
+- [queries/03_customer_analysis.sql](queries/03_customer_analysis.sql) — customer value and retention analysis
+- [docs/data_dictionary.md](docs/data_dictionary.md) — field glossary and revenue logic
+- [screenshots/README.md](screenshots/README.md) — exported dashboard screenshots
 
 ## Database schema
 
@@ -21,59 +31,59 @@ erDiagram
     CATEGORIES ||--o{ PRODUCTS : groups
 ```
 
-See [`docs/data_dictionary.md`](docs/data_dictionary.md) for field descriptions and revenue rules.
+See [docs/data_dictionary.md](docs/data_dictionary.md) for field descriptions and revenue rules.
 
 ## Quick start
 
-You can open `database/ecommerce.db` in **DB Browser for SQLite** or a SQLite-enabled code editor.
+Open [database/ecommerce.db](database/ecommerce.db) in **DB Browser for SQLite** or a SQLite-enabled editor.
 
-Alternatively, with the SQLite command-line tool installed:
+Alternatively, run the SQLite CLI:
 
 ```bash
 sqlite3 database/ecommerce.db
 ```
 
-Try:
+Example queries:
 
 ```sql
 SELECT COUNT(*) AS total_orders FROM orders;
 SELECT * FROM customers LIMIT 5;
 ```
 
-Open and complete the exercises in `queries/`:
+Review the completed SQL work here:
 
-1. [`01_sales_overview.sql`](queries/01_sales_overview.sql)
-2. [`02_product_analysis.sql`](queries/02_product_analysis.sql)
-3. [`03_customer_analysis.sql`](queries/03_customer_analysis.sql)
+1. [queries/01_sales_overview.sql](queries/01_sales_overview.sql)
+2. [queries/02_product_analysis.sql](queries/02_product_analysis.sql)
+3. [queries/03_customer_analysis.sql](queries/03_customer_analysis.sql)
 
-There are no subqueries, CTEs, or window functions required for the initial challenges.
+## Dashboard screenshots
+
+The visual summary for each analysis is available in the screenshots folder:
+
+- [screenshots/01_sales_overview_dashboard.png](screenshots/01_sales_overview_dashboard.png)
+- [screenshots/02_product_analysis_dashboard.png](screenshots/02_product_analysis_dashboard.png)
+- [screenshots/03_customer_analysis_dashboard.png](screenshots/03_customer_analysis_dashboard.png)
 
 ## Re-generate the dataset (optional)
 
-Requires Python 3.9+; uses only the Python standard library:
+Requires Python 3.9+:
 
 ```bash
 python scripts/generate_data.py
 ```
 
-**Warning:** This replaces `database/ecommerce.db` with a fresh deterministic synthetic dataset. Back up your work first if you've edited the database.
-
-**Completed exercises:**
-- [queries/01_sales_overview.sql](queries/01_sales_overview.sql)
-- [queries/02_product_analysis.sql](queries/02_product_analysis.sql)
-- [queries/03_customer_analysis.sql](queries/03_customer_analysis.sql)
+**Warning:** This replaces the SQLite database with a fresh synthetic dataset. Back up your work before regenerating if the database has been edited.
 
 ## SQL skills covered
 
 `SELECT` · `WHERE` · `JOIN` · `LEFT JOIN` · `GROUP BY` · `HAVING` · `ORDER BY` · `COUNT` · `SUM` · `AVG` · `CASE` · `strftime`
 
-## Roadmap
+## Completed work
 
-- [x] Complete 12 SQL exercises
-- [x] Save validated query results and business findings in the query files
-- [ ] Add a BI dashboard screenshot to `screenshots/`
-- [ ] Expand with CTEs and window functions
-- [ ] Add a Python ETL process
+- [x] Complete 3 SQL analysis exercises
+- [x] Save validated query results and insights
+- [x] Export dashboard screenshots for portfolio presentation
+- [x] Document schema and business logic
 
 ## Data privacy
 
