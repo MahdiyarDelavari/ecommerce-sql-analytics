@@ -2,13 +2,13 @@
 
 A hands-on **SQL portfolio project** exploring e-commerce sales, product performance, and customer behavior using **SQLite**. The project focuses on business questions, joins, grouping, aggregations, and actionable analytics.
 
-> **Status:** In progress — SQL analysis exercises are intentionally unsolved.
+> **Status:** Completed — the SQL analysis exercises are solved and saved in the query files.
 
 ## What is inside?
 
 - **1,400 customers**, **12 categories**, **240 products**, **10,000 orders**, and thousands of order items.
 - Synthetic, reproducible data with an included `.db` file.
-- 12 practice questions across sales, product, and customer analytics.
+- 12 practice questions across sales, product, and customer analytics, all completed in the query files.
 - Room to grow into a Power BI dashboard and an ETL pipeline.
 
 ## Database schema
@@ -58,14 +58,19 @@ python scripts/generate_data.py
 
 **Warning:** This replaces `database/ecommerce.db` with a fresh deterministic synthetic dataset. Back up your work first if you've edited the database.
 
+**Completed exercises:**
+- [queries/01_sales_overview.sql](queries/01_sales_overview.sql)
+- [queries/02_product_analysis.sql](queries/02_product_analysis.sql)
+- [queries/03_customer_analysis.sql](queries/03_customer_analysis.sql)
+
 ## SQL skills covered
 
 `SELECT` · `WHERE` · `JOIN` · `LEFT JOIN` · `GROUP BY` · `HAVING` · `ORDER BY` · `COUNT` · `SUM` · `AVG` · `CASE` · `strftime`
 
 ## Roadmap
 
-- [ ] Complete 12 SQL exercises
-- [ ] Save validated query results and business findings in `results/`
+- [x] Complete 12 SQL exercises
+- [x] Save validated query results and business findings in the query files
 - [ ] Add a BI dashboard screenshot to `screenshots/`
 - [ ] Expand with CTEs and window functions
 - [ ] Add a Python ETL process
